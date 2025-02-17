@@ -27,5 +27,10 @@ El client ha de:
 ## Control d'errors
 És important controlar els errors tant en el **client** com en el **servidor** amb blocs `try-catch`.
 
+## Homework
+Intentar fer que el server pugui acceptar més d'un client al mateix temps.
+
+*Pista*: multi-threading.
+
 ## Autor 
 Albert.
