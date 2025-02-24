@@ -14,8 +14,11 @@ public class InteractiveServer {
             System.out.println("A la espera de connexions.");
 
             for(;;){
+                System.out.println("A la espera d'un nou client");
                 Socket socket = ss.accept();
                 System.out.println("Ha arribat un client");
+                System.out.println(socket.getInetAddress().getHostAddress());
+
                 String entrada = "";
                 // llegir de l'input
                 InputStream is = socket.getInputStream();
@@ -32,6 +35,7 @@ public class InteractiveServer {
                     dos.writeUTF(sortida);
                     System.out.println("He enviat:" + sortida);
                 }
+                System.out.println("El client ha decidit tancar la connexió. Tanco canals i socket");
                 dis.close();
                 dos.close();
                 socket.close();
